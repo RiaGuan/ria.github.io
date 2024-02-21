@@ -8,10 +8,11 @@
 <body>
 	<header>
 		<h1>
-			<small>Assignment 2</small> <br>
+			<span style="color: purple;">Exploratory Data Analysis</span>
 			Exploratory Data Analysis
 		</h1>
 
+		
 		<p>
 			<strong>Ria-Yunqian Guan</strong> : <em>riayunqi@mit.edu</em>
 		</p>
@@ -57,7 +58,7 @@
 			<figure style="text-align: left;">
 				<strong>In-depth analysis of the sales market from 2019 to 2022: </strong>
 				<p>By setting the <i>date</i>date as a filter criterion, we have visualized the changes in transaction volume and unit transaction price in the sales market from 2019 to 2022 through Tableau. Among these changes, the unit price has been on a decline, while transaction volume has increased due to the impact of price, which essentially still aligns with the supply and demand balance of the housing market. As for the decline in the unit price of home sales, a current subjective speculation is that it may be due to the impact of COVID-19 leading to economic downturn and a decrease in purchasing power for houses. However, more data is needed to predict causality.</p>
-				<img src="images/1-2.png" alt="" style="max-width: 100%;" />
+				<img src="images/1-2.png" alt="Residential Sales Market after 2019 in Boston" style="max-width: 100%;" />
 				<figcaption>
 				<b></b>Residential Sales Market after 2019 in Boston </b><br>
 				</figcaption>
@@ -66,7 +67,7 @@
 			<figure style="text-align: left;">
 				<strong>Housing Proptypes' effects on Boston residential sales market from 2019 to 2022? </strong>
 				<P>By analyzing the transaction situation of housing types(<i>proptype</i>) over the past 4 years through Tableau, we can see that in terms of transaction volume, RCD-type houses have performed outstandingly, accounting for more than 85% of the total housing market transactions each year, with a total of 3,650 transactions over four years, while the transaction volume for other types of houses has generally remained within the double digits.</P>
-				<img src="images/1-3.png" alt="" style="max-width: 100%;"  />
+				<img src="images/1-3.png" alt="Residential Proptype Market after 2019 in Boston" style="max-width: 100%;"  />
 				<figcaption>
 				<b></b>Residential Proptype Market after 2019 in Boston </b><br>
 				</figcaption>
@@ -76,7 +77,7 @@
 				<p>First of all, we filtered out RCD type houses and conducted further detailed studies on them through <i>style</i> subdivision. The upper half of Fig.4 shows the average sale price of different residential types, while the lower half displays the total sales revenue. As can be seen from the chart, different types of residences have different trends in price and sales revenue between 2019 to 2022. For example, the average sale price and total sales revenue of high-rise type houses show a downward trend over time; the decker type houses' average sale price and total sales revenue remain relatively stable; whereas the free-standing type houses' average sale price and total sales revenue show the opposite trend…</p>
 				<p>Faced with such varied trends, we could analyze and interpret them from two perspectives. As real estate merchants (investors), they might look for property types with potential for appreciation. In this chart, if a certain type of property shows a steady upward trend in average price, even though the total sales volume might decline, this could indicate that the market value of that property type is rising. Therefore, we would preliminarily recommend investment in Decker, Duplex, row-end, and semi-detached properties. (Though Townhouses also meet the criteria, it should be noted that they have significant price fluctuations, hence carrying a certain degree of risk.)</p>
 				<p>Conversely, as individual homebuyers, they usually consider price stability and affordability. Thus, we would recommend types that have a relatively lower average price or show a declining trend, which might indicate that these types of houses are currently more affordable. If the total sales volume also shows a declining trend, this could further suggest that there is an abundance of market supply, potentially giving buyers more room to negotiate. Combining this with this chart, we would preliminarily recommend high-rise and mid-rise to individual buyers, of course, further consideration should be given to individual usage needs.</p>
-				<img src="images/1-5.png" alt="" style="max-width: 100%;" />
+				<img src="images/1-5.png" alt="Residential Proptype Market after 2019 in Boston" style="max-width: 100%;" />
 				<figcaption>
 				<b></b>Residential Proptype Market after 2019 in Boston </b><br>
 				</figcaption>
@@ -85,7 +86,7 @@
 			<h3>Question2: Analysis of speculative behavior in the Boston Residential Sales market (housing flips).</h3>
 			<figure style="text-align: left;">
 				<p>By conducting preliminary analysis calculations using R, we analyze the profit value using (<i>price_diff/price</i>), and the median profit margin for flipping houses in Boston is approximately 21%. Next, we proceed with a timeline analysis: we first use <i>flip_ind = 1</i> as a filter condition, and analyze the number of transactions identified as house flipping on Boston's housing transaction market over the past 20 years (from 2000-2022) in the form of a timeline chart. It is evident that the volume of house-flipping transactions was in the single digits from 2000 to 2010 (part of reasons may due to insufficient data collection). Starting from 2011, the volume of transactions aimed at house flipping began to increase significantly, reaching a peak in 2016 (with a transaction volume of 60); whereas in the subsequent six years, it continued to fluctuate and decline. Therefore, our further analysis will focus on the years 2011 to 2022 going forward.</p>
-				<img src="images/2-1.png" alt="" style="max-width: 100%;" />
+				<img src="images/2-1.png" alt="Flip housing distribution through timeline" style="max-width: 100%;" />
 				<figcaption>
 				<b></b>Flip housing distribution through timeline </b><br>
 				</figcaption>
@@ -94,7 +95,7 @@
 			<figure style="text-align: left;">
 				<strong>factors that influence house flipping profits: the duration of the trading cycle and the change in transaction price.</strong>
 				<p>This chart shows the relationship between the length of the trading cycle (long-term, mid-term, and short-term) and the change in transaction prices within Boston's house flipping activities. It indicates that the duration of the trading cycle indeed affects the price changes in property transactions, especially as long-term and short-term trading cycles are more likely to experience extreme price fluctuations. However, the majority of transactions exhibit relatively small changes in price, with the median close to zero. This may suggest that in the Boston market, unless one can capitalize on specific market opportunities, predicting price changes based solely on the duration of the trading cycle may not be sufficient to generate significant profits.</p>
-				<img src="images/2-2.png" alt="" style="max-width: 100%;" />
+				<img src="images/2-2.png" alt="Flip term & Price change" style="max-width: 100%;" />
 				<figcaption>
 				<b></b>Flip term & Price change </b><br>
 				</figcaption>
@@ -103,32 +104,57 @@
 			<figure style="text-align: left;">
 				<strong>factors that influence house flipping profits: the proptype of the housing and the change in transaction price.</strong>
 				<p>This chart shows how different types of properties influence the profit margins (difference between initial and final transaction prices) in Boston's house flipping market. It concludes that property type significantly impacts flipping profits, with types like APT, COM, and R1F displaying high profit potential, whereas RCD types offer limited profit margins. Overall, while some properties exhibit high profitability, the majority show modest gains, and the risks of flipping vary markedly by property type. Investors should consider these factors and assess market dynamics and risks accordingly.</p>
-				<img src="images/2-3.png" alt="" style="max-width: 100%;" />
+				<img src="images/2-3.png" alt="Housing proptype & Price change " style="max-width: 100%;" />
 				<figcaption>
 				<b></b>Housing proptype & Price change </b><br>
-				</figcaption>
+			</figcaption>
+				<p>Lastly, we would like to address one final question regarding the house flipping market: Who is engaged in flipping houses? We defined new variables (buyer_category & seller_category) using the R language, classifying entities from LLC/INC/CORP/CO/INC as corporate-type buyers; trust/bank as the second category of buyers; and fannie mae/freddie mac/government entity as the third category (government) of buyers. According to statistics, about 38.1% of buyers belong to the corporate category, 61.6% of buyers are classified as trust/bank, with the remaining 0.2% of buyers coming from government agencies. Similarly, we categorized and integrated sellers, and statistics show that approximately 41.3% of sellers belong to the corporate category, 58.3% of sellers come from trust/bank, with the remaining 0.4% coming from government agencies.</p>
 			</figure>
 
+			
+		
 			<h3>Question3: What characteristics determine higher values for houses in Boston?</h3>
 			<figure style="text-align: left;">
-				<img src="IMAGE_FILENAME" alt="" />
+				<strong> Characteristics determine higher values for houses in Boston: location.</strong>
+				<p>This map illustrates the average housing prices in different areas of Boston. The color gradient represents a range of average prices, with the darker tones indicating higher prices and lighter tones indicating lower prices. Specific average prices are annotated on each area, highlighting considerable variability across the city. The highest average price observed is $9,142,374, which significantly contrasts with the lower end of the spectrum at $475,800. Such disparities suggest a diverse housing market, with certain areas being markedly more expensive than others, potentially reflecting varying neighborhood desirability, local amenities, and housing characteristics.</p>
+  				<img src="images/3-1.png" alt="Housing Price difference in Boston (2019-2022)" style="max-width: 100%;"/>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				<b></b>Housing Price difference in Boston due to location (2019-2022) </b><br>
 				</figcaption>
 			</figure>
 
 			<figure style="text-align: left;">
-				<img src="IMAGE_FILENAME" alt="" />
+				<strong> Characteristics determine higher values for houses in Boston:Housing size.</strong>
+				<p>The scatter plot displays the relationship between housing prices and two size metrics: lot size and interior square footage (labeled as 'Lotsize' and 'Intersf' respectively). For lot size, the data points are heavily clustered at lower price points and smaller lot sizes, with a few outliers exhibiting high prices for larger lots. In contrast, interior square footage shows a more pronounced positive correlation with price; as the interior size increases, there's a noticeable trend towards higher prices. This suggests that while larger lot sizes do not consistently equate to higher prices, the interior square footage is a more reliable predictor of a house's price, with larger homes generally commanding higher prices in the market.</p>
+				<img src="images/3-2.png" alt="Housing Price difference in Boston (2019-2022)" style="max-width: 100%;"/>
 				<figcaption>
-				ENTER IMAGE CAPTION HERE.
+				<b></b>Housing Price difference in Boston due to size(2019-2022) </b><br>
+				</figcaption>
+			</figure>
+
+			<figure style="text-align: left;">
+				<strong> Characteristics determine higher values for houses in Boston:Housing size.</strong>
+				<p>This scatter plot depicts the relationship between the year buildings were constructed and their respective prices in Boston. The data suggests that the "year a residence was built" may precede the "year a building was built," likely due to most properties undergoing renovation or reconstruction at their original sites. Post-2000, there is a noticeable increase in the number of buildings constructed, with a relatively concentrated price distribution that averages lower. However, there are exceptional cases of very high prices for buildings constructed in both earlier and more recent years, indicating that the age or renovation status of a building influences its price but is not the sole determinant. Boston's property prices are also affected by a combination of factors such as location, historical value, and market trends. In summary, there is no clear linear correlation between the construction year and house prices, suggesting that a property's value is more significantly impacted by other aspects like location quality, property condition, and market supply and demand.</p>
+				<img src="images/3-3.png" alt="Housing Price difference in Boston (2019-2022)" style="max-width: 100%;"/>
+				<figcaption>
+				<b></b>Housing Price difference in Boston due to yearbuilt(2019-2022) </b><br>
 				</figcaption>
 			</figure>
 		</section>
 
 		<section>
 			<h2>Summary</h2>
+			<p>The analysis is structured around three main questions: recent market changes, speculative behavior (housing flips), and determinants of housing values. The report highlights significant fluctuations in the Boston residential sales market, especially between 2016 and 2019, with a distinct divergence in trends post-2019, possibly due to COVID-19 impacts. The decline in unit prices and increase in transaction volumes post-2019 suggest a shift in market dynamics. Detailed analysis indicates the dominant role of RCD-type houses in transaction volumes and varied trends across different housing types, suggesting investment opportunities in properties like Decker, Duplex, row-end, and semi-detached houses.</p>
+		    <p>Speculative behavior, analyzed through house flipping activities, shows a peak in flipping transactions in 2016 with a profit margin median of 21%, indicating significant involvement by corporate and trust/bank entities. Factors influencing flipping profits include the property type and duration of the trading cycle, with certain property types like APT, COM, and R1F showing higher profit potentials.</p>
+		    <p>Furthermore, the report delves into characteristics determining higher house values in Boston, identifying location, housing size (interior square footage more so than lot size), and the year of construction as key factors. The analysis reveals a diverse housing market with significant price disparities across different areas, a positive correlation between interior size and price, and a nuanced impact of construction year on property values.</p>
+		</section>
 
-			<p>WRITE FINAL SUMMARY HERE.</p>
+
+
+		<section>
+			<h2>Reflection</h2>
+			<p> 1. Before processing the data, it is crucial to understand the meaning represented by each data variable and to correct any invalid or erroneous data. This often requires a kind of intuition—anticipating common mistakes. Facing this dataset, there are many data points I still cannot fully comprehend (some differ from my normal expectations, some definitions are not clear enough, such as the corresponding relationships and differences between usecode, proptype, and style). This indicates that if one is collecting data, it is necessary to provide more detailed and comparative definitions in the dictionary.</p>
+		    <p> 2. When completing this assignment, I often faced difficulties in choosing the method of visualization. Sometimes I believe that simple histograms could most directly present the analysis results, but this would reduce the overall appeal of the report. Also, it's important to avoid my subjective judgment leading to biased analyses. For instance, I previously assumed that older building years would lead to a decrease in price, but the scatter distribution of the data shows that there isn't such a direct correlation. </p>
 		</section>
 	</main>
 </body>
